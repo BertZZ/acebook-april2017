@@ -1,45 +1,47 @@
-<div id='clearance'>
-  
-<div class="float-left">
-  <div class="welcome-text-container">
-    <h2 class="welcome-title">Welcome to Acebook</h2>
-    <ul class="slides">
-      <li class="slide showing">"It's the greatest social network. It has the best posts.
-        The greatest photos. It's gonna be yee-uuuuge."</li>
-      <li class="slide">"My favourite social network, it is!"</li>
-      <li class="slide">"I met my dog walker on Acebook!"</li>
-      <li class="slide">"Hmm, interesting."</li>
-      <li class="slide">"Finally, another way to feel socially inadequate!"</li>
-    </ul>
+<body class='login-page'>
+  <div id='clearance'>
+
+    <div class="left-column float-left">
+      <div class="welcome-text-container">
+        <h2 class="welcome-title">Welcome to Acebook</h2>
+        <ul class="slides">
+          <li class="slide showing">"It's the greatest social network. It has the best posts.
+            The greatest photos. It's gonna be yee-uuuuge."</li>
+          <li class="slide">"My favourite social network, it is!"</li>
+          <li class="slide">"I met my dog walker on Acebook!"</li>
+          <li class="slide">"Hmm, interesting."</li>
+          <li class="slide">"Finally, another way to feel socially inadequate!"</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sign-up-form">
+      <%= form_for @user, html: {class: 'new-user'} do |form| %>
+
+        <div class='text-field info'>
+          <%= form.text_field :name, :type => 'name', placeholder: 'Name...' %>
+        </div>
+
+        <div class='text-field info'>
+          <%= form.text_field :email, :type => 'email', placeholder: 'Email...' %>
+        </div>
+
+        <div class='password-field info'>
+          <%= form.password_field :password, placeholder: "Password..." %>
+        </div>
+        <div class="choose-file">
+          <input id="upload_file" placeholder="Avatar File" disabled="disabled" />
+        </div>
+        <div class='file-upload'>
+            Choose Avatar
+          <%= form.file_field :avatar, class: "upload" %>
+        </div>
+
+        <div class='submit-field'>
+          <%= form.submit %>
+        </div>
+
+      <% end %>
+    </div>
   </div>
-</div>
-
-<div class="sign-up-form">
-  <%= form_for @user, html: {class: 'new-user'} do |form| %>
-
-    <div class='text-field info'>
-      <%= form.text_field :name, :type => 'name', placeholder: 'Name...' %>
-    </div>
-
-    <div class='text-field info'>
-      <%= form.text_field :email, :type => 'email', placeholder: 'Email...' %>
-    </div>
-
-    <div class='password-field info'>
-      <%= form.password_field :password, placeholder: "Password..." %>
-    </div>
-    <div class="choose-file">
-      <input id="upload_file" placeholder="Avatar File" disabled="disabled" />
-    </div>
-    <div class='file-upload'>
-        Choose Avatar
-      <%= form.file_field :avatar, class: "upload" %>
-    </div>
-
-    <div class='submit-field'>
-      <%= form.submit %>
-    </div>
-
-  <% end %>
-</div>
-</div>
+</body>
