@@ -1,17 +1,23 @@
- .footer {
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   width: 100%;
-   padding-left: 35%;
-   background-color: #964040;
-   padding-bottom: 0px;
-   padding-top: 0px;
-   color: #fff;
- }
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #964040;
+}
 
- .footer_link {
-   font-size: 50px;
-   text-decoration: none;
-   color: #fff;
- }
+.footer p {
+  color: #fff;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 20px
+}
+
+.footer-link {
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+}

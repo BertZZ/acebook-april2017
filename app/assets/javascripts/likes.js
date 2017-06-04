@@ -1,4 +1,4 @@
-function likeOnLoad(likeButton) {
+function likesOnLoad(likeButton) {
   likeButton.forEach(function(element) {
     element.addEventListener('click', function(evt) {
       var postId = evt.target.dataset.postId;
